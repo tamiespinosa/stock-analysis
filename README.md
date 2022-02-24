@@ -26,6 +26,7 @@
 <p align="center"> Figure 4: Embeded Loop Outcome for 2018</p> 
 
 ...
+
         If Cells(i - 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
             tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
             tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8)
