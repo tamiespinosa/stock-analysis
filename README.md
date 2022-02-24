@@ -14,8 +14,13 @@
 
 ### <a name="background"></a>Background
 
+Steve, a financier, is helping his clients who want to invest in DAQO New Energy Corp (DQ). He is wanting to analyze a handful of other green energy stocks to see if there's a better stock to invest in. 
+
+Prior to this analysis a macro was prepared for Steve to run this analysis, yet as part of a faster code will be provided. 
 
 ### <a name="purpose"></a>Purpose
+
+The purpose of this analysis is to determine which would be the best stock to purchase.  Additionally, the refactored code will be compared to the original code to better understand its benefits and pitfalls. 
 
 ## <a name="results"></a>Results
 
@@ -26,16 +31,16 @@ From the analyzed data we found that 2017 was a much better year for trading the
 The two stocks that increased in price both years were ENPH and RUN. ENPH increased in price by 129% in 2017 and 81% in 2018. Where as RUN had a 5% increase in 2017 and an 84% increase in 2018. 
 
 <p align="center"> <img src="Resources/VBA_Challenge_2017.png" width ="30%" alt="VBA_Challenge_2017"> </p>
-<p align="center"> Figure 1: Refracted Code Outcome for 2017</p> 
+<p align="center"> Figure 1: Refactored Code Outcome for 2017</p> 
 
 <p align="center"> <img src="Resources/VBA_Challenge_2018.png" width ="30%" alt="VBA_Challenge_2018"> </p>
-<p align="center"> Figure 2: Refracted Code Outcome for 2018</p> 
+<p align="center"> Figure 2: Refactored Code Outcome for 2018</p> 
 
 ### <a name="codeper"></a>Code Performance
 
 In order to better serve the clients, the speed the code uses should be taken into consideration. In the original code, embeded loops were used. The outside loop went though all 12 different stocks. The inside loop evaluated all of the rows in the code. There are about 3,000 rows in our data sets for both the 2017 year and the 2018 year. In this nested loop, the code evaluates all of the rows for every different stock, so that means there are aproximately 36,000 iterations. 
 
-Our new code uses a conditional statement to evaluate if the . Therefore passing though each row only once. The code has only approximately 3,000 iterations. 
+Our new code uses a conditional statement to evaluate if the data is moving into the next set of stocks rather than a for loop. Therefore passing though each row only once. The code has only approximately 3,000 iterations. 
 
 The resutls themselves are not different but the time it took the computer to evaluate the results was reduced from __ to __ . 
 
@@ -81,6 +86,8 @@ Yet the time it took the computer to work through the nested if statement was sl
         End If
 
 ...
+
+The way all of these codes are written assumes that the data has been order such that all stocks are grouped together. A potential improvement for future macros would be to include a task that ensures that all of the data is organized by stocks. 
 
 ## <a name="summary"></a>Summary
 
