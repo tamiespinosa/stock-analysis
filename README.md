@@ -91,6 +91,13 @@ The way all of these codes are written assumes that the data has been order such
 
 ## <a name="summary"></a>Summary
 
+As part of the data analysis we can conclude that investing in ENPH could bring better returns in the long run than investing in DQ. 
+
+The refactored code reduced the iterations from 36,000 to 3,000 making the code faster by a factor of 10 without changing the results. 
+
+
+
+
 ## <a name="references"></a> References
 
 [1] [Stock Analysis Excel File](https://github.com/tamiespinosa/stock-analysis/blob/a36556cee6e784b0aa7973acf9afcac611f73115/VBA_Challenge.xlsm)
