@@ -20,6 +20,11 @@
 ## <a name="results"></a>Results
 
 ### <a name="stockper"></a>Stock Performance
+
+From the analyzed data we found that 2017 was a much better year for trading these set of stocks than 2018. In 2017, eleven out of the twelve stocks increased in price. In 2018 only two of the stocks increased in price, and all of the other stocks decreased in price. 
+
+The two stocks that increased in price both years were ENPH and RUN. ENPH increased in price by 129% in 2017 and 81% in 2018. Where as RUN had a 5% increase in 2017 and an 84% increase in 2018. 
+
 <p align="center"> <img src="Resources/VBA_Challenge_2017.png" width ="30%" alt="VBA_Challenge_2017"> </p>
 <p align="center"> Figure 1: Refracted Code Outcome for 2017</p> 
 
