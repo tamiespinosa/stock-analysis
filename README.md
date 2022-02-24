@@ -60,6 +60,23 @@ I compressed the code even further by creating nested if statements in order to 
 
 Yet the time it took the computer to work through the nested if statement was slighlty more than what it took to work through individual if statements. So the code was reversed to individual if statements. 
 
+...
+
+        If Cells(i, 1).Value = tickers(tickerIndex) Then
+            tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8)
+        End If       
+      
+        If Cells(i - 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
+            tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
+        End If
+               
+        If Cells(i + 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
+            tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
+            tickerIndex = tickerIndex + 1
+        End If
+
+...
+
 ## <a name="summary"></a>Summary
 
 ## <a name="references"></a> References
