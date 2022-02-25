@@ -60,6 +60,8 @@ In the [third version](#version3), I re-arranged the if statement in the nested 
 
 The results in all of those versions did not change. 
 
+The way all of these codes are written assumes that the data has been order such that all stocks are grouped together. A potential improvement for future macros would be to include a task that ensures that all of the data is organized by stocks.
+
 
 <a name="version1"></a> **Version 1** 
 ...
@@ -113,9 +115,6 @@ The results in all of those versions did not change.
     
         End If
 ...
-
-
-The way all of these codes are written assumes that the data has been order such that all stocks are grouped together. A potential improvement for future macros would be to include a task that ensures that all of the data is organized by stocks. 
 
 ## <a name="summary"></a>Summary
 
