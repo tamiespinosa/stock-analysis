@@ -52,15 +52,15 @@ In the original code, embeded loops were used. The outside loop went though all 
 
 Our new code uses a conditional statement to evaluate if the data is moving into the next set of stocks rather than a for loop. Therefore passing though each row only once. The code has only approximately 3,000 iterations. 
 
-In the process of finding the most efficient code, I went through three versions of refactored code. In the [first version](#version1), I used three different if statements to determine the starting price point in the year for each stock, the ending price point and total volume of daily trades. 
+In the process of finding the most efficient code, I went through three versions of refactored code. In the [first version](#version1), I used three different if statements to determine the starting price point in the year for each stock, the ending price point and total volume of daily trades. This code took 0.17 and 0.18 seconds to evaluate the 2017 and the 2018 stocks respectively.
 
-In the [second version](#version2), I used a nested if statement to get the same information, yet because I arranged the evaluations in a more complicated way my time actually increased than having separate if statments. 
+In the [second version](#version2), I used a nested if statement to get the same information, yet because I arranged the evaluations in a more complicated way my time actually increased than having separate if statments.  This code took 0.22 seconds to evaluate the 2017 and the 2018 stocks.
 
-In the [third version](#version3), I re-arranged the if statement in the nested loop in such a way that it would reduce the amount of evaluations done. This one gave me marginally faster results. Additionally, by reducing the number of times that we evaluate if we are evaluating the right stock we reduce the potential of errors when maintaining code in the future. 
+In the [third version](#version3), I re-arranged the if statement in the nested loop in such a way that it would reduce the amount of evaluations done. This one gave me marginally faster results. Additionally, by reducing the number of times that we evaluate if we are evaluating the right stock we reduce the potential of errors when maintaining code in the future.  This code took 0.12 seconds to evaluate the 2017 and the 2018 stocks.
 
 The results in all of those versions did not change. 
 
-The way all of these codes are written assumes that the data has been order such that all stocks are grouped together. A potential improvement for future macros would be to include a task that ensures that all of the data is organized by stocks.
+The way all of these codes are written assumes that the data has been ordered such that all stocks are grouped together. A potential improvement for future macros would be to include a task that ensures that all of the data is organized by stocks.
 
 
 <a name="version1"></a> **Version 1** 
