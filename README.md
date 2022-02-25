@@ -52,16 +52,34 @@ In the original code, embeded loops were used. The outside loop went though all 
 
 Our new code uses a conditional statement to evaluate if the data is moving into the next set of stocks rather than a for loop. Therefore passing though each row only once. The code has only approximately 3,000 iterations. 
 
-In the process of finding the most efficient code, I went through three versions of refactored code. In the first version, I used three different if statements to determine the starting price point in the year for each stock, the ending price point and total volume of daily trades. 
+In the process of finding the most efficient code, I went through three versions of refactored code. In the [first version](#version1), I used three different if statements to determine the starting price point in the year for each stock, the ending price point and total volume of daily trades. 
 
-In the second version, I used a nested if statement to get the same information, yet because I arranged the evaluations in a more complicated way my time actually increased than having separate if statments. 
+In the [second version](#version2), I used a nested if statement to get the same information, yet because I arranged the evaluations in a more complicated way my time actually increased than having separate if statments. 
 
-In the third version, I re-arranged the if statement in the nested loop in such a way that it would reduce the amount of evaluations done. This one gave me marginally faster results. Additionally, by reducing the number of times that we evaluate if we are evaluating the right stock we reduce the potential of errors when maintaining code in the future. 
+In the [third version](#version3), I re-arranged the if statement in the nested loop in such a way that it would reduce the amount of evaluations done. This one gave me marginally faster results. Additionally, by reducing the number of times that we evaluate if we are evaluating the right stock we reduce the potential of errors when maintaining code in the future. 
 
 The results in all of those versions did not change. 
 
 
-*Version 1*
+<a name="version1"></a> **Version 1** 
+...
+
+        If Cells(i, 1).Value = tickers(tickerIndex) Then
+            tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8)
+        End If       
+      
+        If Cells(i - 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
+            tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
+        End If
+               
+        If Cells(i + 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
+            tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
+            tickerIndex = tickerIndex + 1
+        End If
+...
+
+
+<a name="version2"></a>**Version 2** 
 ...
 
         If Cells(i - 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
@@ -79,26 +97,7 @@ The results in all of those versions did not change.
         End If          
 ...
 
-
-*Version 2*
-...
-
-        If Cells(i, 1).Value = tickers(tickerIndex) Then
-            tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8)
-        End If       
-      
-        If Cells(i - 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
-            tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
-        End If
-               
-        If Cells(i + 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
-            tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
-            tickerIndex = tickerIndex + 1
-        End If
-
-...
-
-*Version 3*
+<a name="version3"></a>**Version 3**
 ...
 
         If Cells(i, 1).Value = tickers(tickerIndex) Then
