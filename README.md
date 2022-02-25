@@ -61,7 +61,7 @@ In the third version, I re-arranged the if statement in the nested loop in such 
 The results in all of those versions did not change. 
 
 
-
+*Version 1*
 ...
 
         If Cells(i - 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
@@ -80,7 +80,7 @@ The results in all of those versions did not change.
 ...
 
 
-
+*Version 2*
 ...
 
         If Cells(i, 1).Value = tickers(tickerIndex) Then
@@ -98,7 +98,7 @@ The results in all of those versions did not change.
 
 ...
 
-
+*Version 3*
 ...
 
         If Cells(i, 1).Value = tickers(tickerIndex) Then
