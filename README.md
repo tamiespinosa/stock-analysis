@@ -35,7 +35,7 @@ DQ, in contrast, increased in price 199.4% in 2017 but in 2018 the price dropped
 <p align="center"> <img src="Resources/VBA_Challenge_2017-refact2.png" width ="30%" alt="VBA_Challenge_2017-refact2"> </p>
 <p align="center"> Figure 1: Final Refactored Code Outcome for 2017</p> 
 
-<p align="center"> <img src="Resources/VBA_Challenge_2018refact2.png" width ="30%" alt="VBA_Challenge_2018-refact2"> </p>
+<p align="center"> <img src="Resources/VBA_Challenge_2018-refact2.png" width ="30%" alt="VBA_Challenge_2018-refact2"> </p>
 <p align="center"> Figure 2: Final Refactored Code Outcome for 2018</p> 
 
 ### <a name="codeper"></a>Code Performance
