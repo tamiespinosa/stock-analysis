@@ -97,6 +97,24 @@ The results in all of those versions did not change.
 
 ...
 
+
+...
+
+        If Cells(i, 1).Value = tickers(tickerIndex) Then
+            tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8)
+        
+            If Cells(i - 1, 1).Value <> tickers(tickerIndex) Then
+                tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
+                
+                ElseIf Cells(i + 1, 1).Value <> tickers(tickerIndex) Then
+                    tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
+                    tickerIndex = tickerIndex + 1
+            End If
+    
+        End If
+...
+
+
 The way all of these codes are written assumes that the data has been order such that all stocks are grouped together. A potential improvement for future macros would be to include a task that ensures that all of the data is organized by stocks. 
 
 ## <a name="summary"></a>Summary
