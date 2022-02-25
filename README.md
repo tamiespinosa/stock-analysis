@@ -44,6 +44,12 @@ In order to better serve the clients, the code performance should be taken into 
 
 In the original code, embeded loops were used. The outside loop went though all 12 different stocks. The inside loop evaluated all of the rows in the code. There are about 3,000 rows in our data sets for both the 2017 year and the 2018 year. In this nested loop, the code evaluates all of the rows for every different stock, so that means there are aproximately 36,000 iterations. This code took 0.99 seconds to evaluate the 2017 and the 2018 stocks. And it required a different macro to format the tables. 
 
+<p align="center"> <img src="Resources/Module_2017.png" width ="30%" alt="Module_2017"> </p>
+<p align="center"> Figure 3: Embeded Loop Code Outcome for 2017</p> 
+
+<p align="center"> <img src="Resources/Module_2018.png" width ="30%" alt="Module_2018"> </p>
+<p align="center"> Figure 4: Embeded Loop Outcome for 2018</p> 
+
 Our new code uses a conditional statement to evaluate if the data is moving into the next set of stocks rather than a for loop. Therefore passing though each row only once. The code has only approximately 3,000 iterations. 
 
 In the process of finding the most efficient code, I went through three versions of refactored code. In the first version, I used three different if statements to determine the starting price point in the year for each stock, the ending price point and total volume of daily trades. 
@@ -54,11 +60,6 @@ In the third version, I re-arranged the if statement in the nested loop in such 
 
 The results in all of those versions did not change. 
 
-<p align="center"> <img src="Resources/Module_2017.png" width ="30%" alt="Module_2017"> </p>
-<p align="center"> Figure 3: Embeded Loop Code Outcome for 2017</p> 
-
-<p align="center"> <img src="Resources/Module_2018.png" width ="30%" alt="Module_2018"> </p>
-<p align="center"> Figure 4: Embeded Loop Outcome for 2018</p> 
 
 
 ...
