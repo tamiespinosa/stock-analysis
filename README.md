@@ -121,12 +121,9 @@ The way all of these codes are written assumes that the data has been order such
 
 As part of the data analysis we can conclude that investing in ENPH would've been the best stock to invest in 2017 and 2018.  
 
-The refactored code reduced the iterations from aproximately 36,000 to approximately 3,000 making the code faster by a factor of 10 without changing the results. 
+The refactored code reduced the iterations from aproximately 36,000 to approximately 3,000 making the code faster by a factor of 10 without changing the results. The final version of the refactored code made it so that it will be simple to maintain the code in the future by minimizing evaluations.  
 
-Although in this case the refactored code did not have drawbacks, when refactoring the code there's always a potential of missing something downstream of the changes one makes. 
-
-
-
+Although in this case the refactored code did not have drawbacks, when refactoring the code there's always a potential of missing something downstream of the changes one makes.   
 
 ## <a name="references"></a> References
 
